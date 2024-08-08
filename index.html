@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="En Cementerio Jardín - Parque del Encuentro ofrecemos opciones de entierro y cremación con asesoramiento personalizado en Santa Cruz. Contáctanos para más información.">
+    <title>Cementerio Jardín - Parque del Encuentro | Servicios Funerarios en Santa Cruz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#Cementerio">Nuestras Instalaciones</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#map">Ubicación</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Logo -->
+    <img src="img/perfil.png" alt="Logo del Cementerio" id="logo">
+
+    <!-- Header -->
+    <header>
+        <section id="titulo y nombre">
+            <h1>CEMENTERIO JARDIN PARQUE DEL ENCUENTRO
+            <p>Asesor Samy kikunaga</p></h1>
+        </section>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="services">
+            <h2>Opciones de Entierro y Cremación</h2>
+            <section id="entierro-cremacion">
+                <div class="image-item">
+                    <img src="img/Imagen de WhatsApp 2024-07-24 a las 15.22.50_5f815885.jpg" alt="Bóveda de entierro en Cementerio Jardín - Parque del Encuentro" />
+                </div>
+                <div class="image-item">
+                    <img src="img/precio.jpg" alt="Precio" />
+                </div>
+            </section>
+            <a href="#contact" class="cta-button">Contáctanos</a>
+            <a href="#map" class="cta-button">Ver Ubicación</a>
+        </section>
+
+        <!-- Sección de Imágenes del Cementerio -->
+        <section id="Cementerio">
+            <h2>Nuestras Instalaciones</h2>
+            <div class="image-grid">
+                <div class="image-item">
+                    <img src="img/Imagen de WhatsApp 2024-07-24 a las 15.22.51_904779cf.jpg" alt="Foto de bóveda" />
+                </div>
+                <div class="image-item">
+                    <img src="img/Imagen de WhatsApp 2024-07-24 a las 15.22.51_ef369329.jpg" alt="Foto de bóveda" />
+                </div>
+                <div class="image-item">
+                    <img src="img/Imagen de WhatsApp 2024-07-24 a las 15.22.50_b00100b2.jpg" alt="Foto de bóveda" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapa -->
+        <section id="map">
+            <h2>Ubicación</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15198.0526509402!2d-63.0916294!3d-17.7675638!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1ef59521cca45%3A0x2d213a2700a46f1b!2sCementerio%20Jard%C3%ADn%20Parque%20del%20Encuentro!5e0!3m2!1ses-419!2sbo!4v1723015779507!5m2!1ses-419!2sbo" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+
+    <!-- Contacto -->
+    <section id="contact">
+        <h2>Contacto</h2>
+        <p>Para consultas y asesoramiento, contáctanos por <a href="https://wa.me/+59162158339" target="_blank"><b>WhatsApp</b></a></p>
+        <p>O llámanos directamente: <a href="tel:+59176896456"><b>76896456</b></a></p>
+    </section>
+
+    <!-- Floating Buttons -->
+    <div class="floating-button">
+        <a href="https://wa.me/+59162158339" target="_blank" aria-label="WhatsApp">
+            <img src="img/whatsapp-svgrepo-com.svg" alt="WhatsApp">
+        </a>
+        <a href="tel:+59176896456" aria-label="Teléfono">
+            <img src="img/phone-svgrepo-com.svg" alt="Teléfono">
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Cementerio Jardín - Parque del Encuentro</p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="" alt="Imagen en pantalla completa">
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Abrir el modal al hacer clic en una imagen
+            const images = document.querySelectorAll('.image-item img');
+            const modal = document.querySelector('.modal');
+            const modalImg = document.querySelector('.modal-content img');
+            const closeBtn = document.querySelector('.close');
+
+            images.forEach(img => {
+                img.addEventListener('click', function () {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                });
+            });
+
+            // Cerrar el modal al hacer clic en el botón de cierre o fuera de la imagen
+            closeBtn.addEventListener('click', function () {
+                modal.style.display = 'none';
+            });
+
+            // Cerrar el modal si se hace clic fuera de la imagen
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
